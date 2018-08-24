@@ -39,13 +39,43 @@
         }).then(response => {
           mapbox = response;
           mapboxgl.accessToken = mapbox;
-        });
 
-        let map = new mapboxgl.Map({
-          container: "map",
-          style: 'mapbox://styles/spenceryang89/cjl1xnyyo8bcs2sqne3gq0cdm',
-          center: [-87.661557, 41.893748],
-          zoom: 4
+          let map = new mapboxgl.Map({
+            container: "map",
+            style: 'mapbox://styles/spenceryang89/cjl1xnyyo8bcs2sqne3gq0cdm',
+            center: [-87.661557, 41.893748],
+            zoom: 4
+          });
+
+          map.on('load', function() {
+            map.addLayer({
+              id: 'major-airports',
+              type: 'symbol',
+              source: {
+                type: 'geojson',
+                data: majorAirports
+              },
+              layout: {
+                'icon-image': 'marker-15',
+                'icon-allow-overlap': true,
+                'icon-size': 1,
+              }
+            });
+            map.addLayer({
+              id: 'airports',
+              type: 'symbol',
+              minzoom: 6,
+              source: {
+                type: 'geojson',
+                data: airports
+              },
+              layout: {
+                'icon-image': 'marker-15',
+                'icon-allow-overlap': true,
+                'icon-size': 0.8,
+              }
+            });
+          })
         });
 
         let airports;
@@ -81,36 +111,6 @@
         let flightsJSON, largeFlightsJSON, departureLines, arrivalLines;
         let departFrom = {};
         let arriveTo = {};
-
-        map.on('load', function() {
-          map.addLayer({
-            id: 'major-airports',
-            type: 'symbol',
-            source: {
-              type: 'geojson',
-              data: majorAirports
-            },
-            layout: {
-              'icon-image': 'marker-15',
-              'icon-allow-overlap': true,
-              'icon-size': 1,
-            }
-          });
-          map.addLayer({
-            id: 'airports',
-            type: 'symbol',
-            minzoom: 6,
-            source: {
-              type: 'geojson',
-              data: airports
-            },
-            layout: {
-              'icon-image': 'marker-15',
-              'icon-allow-overlap': true,
-              'icon-size': 0.8,
-            }
-          });
-        })
 
         $.ajax({
           method: 'get',
