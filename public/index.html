@@ -76,7 +76,40 @@
               }
             });
           })
-        });
+        }).then(getFlights);
+
+        function getFlights() {
+          $.ajax({
+            method: 'get',
+            url: `/flights`
+          }).then(response => {
+            parseJSON(JSON.parse(response));
+            setAirportFlights(largeFlightsJSON);
+            // map.getSource('large-planes').setData(largeFlightsJSON);
+          }).then(() => {
+            map.addSource('large-planes', { type: 'geojson', data: largeFlightsJSON });
+            map.addLayer({
+              id: 'large-planes',
+              type: 'symbol',
+              source: 'large-planes',
+              layout: {
+                'icon-image': 'airport-15',
+                'icon-allow-overlap': true,
+                'icon-rotate': ['get', 'direction'],
+                'icon-size': 0.8,
+              }
+            });
+            map.on('click', (e) => {
+              let features = map.queryRenderedFeatures(e.point, { layers: ['major-airports', 'airports', 'large-planes'] });
+              if (features.length) {
+                let clickedPoint = features[0];
+                flyToItem(clickedPoint);
+                createPopup(clickedPoint);
+                generateLine(clickedPoint)
+              }
+            });
+          });
+        }
 
         let airports;
         let majorAirports;
@@ -111,39 +144,6 @@
         let flightsJSON, largeFlightsJSON, departureLines, arrivalLines;
         let departFrom = {};
         let arriveTo = {};
-
-        $.ajax({
-          method: 'get',
-          url: `/flights`
-        }).then(response => {
-          parseJSON(JSON.parse(response));
-          setAirportFlights(largeFlightsJSON);
-          // map.getSource('large-planes').setData(largeFlightsJSON);
-        }).then(() => {
-          map.addSource('large-planes', { type: 'geojson', data: largeFlightsJSON });
-          map.addLayer({
-            id: 'large-planes',
-            type: 'symbol',
-            source: 'large-planes',
-            layout: {
-              'icon-image': 'airport-15',
-              'icon-allow-overlap': true,
-              'icon-rotate': ['get', 'direction'],
-              'icon-size': 0.8,
-            }
-          });
-          map.on('click', (e) => {
-            let features = map.queryRenderedFeatures(e.point, { layers: ['major-airports', 'airports', 'large-planes'] });
-            if (features.length) {
-              let clickedPoint = features[0];
-              flyToItem(clickedPoint);
-              createPopup(clickedPoint);
-              generateLine(clickedPoint)
-            }
-          });
-        });
-
-
 
         function getPlaneLines(departure, arrival, coordinates) {
           departureLines = {
