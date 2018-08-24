@@ -32,7 +32,8 @@
       </div>
 
       <script type="text/javascript">
-        let mapbox;
+        let mapbox, map;
+
         $.ajax({
           method: 'get',
           url: `/mapbox`
@@ -40,7 +41,7 @@
           mapbox = response;
           mapboxgl.accessToken = mapbox;
 
-          let map = new mapboxgl.Map({
+          map = new mapboxgl.Map({
             container: "map",
             style: 'mapbox://styles/spenceryang89/cjl1xnyyo8bcs2sqne3gq0cdm',
             center: [-87.661557, 41.893748],
