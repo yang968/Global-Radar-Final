@@ -9,7 +9,7 @@
     <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700' rel='stylesheet' />
     <link href='./style.css' rel='stylesheet' type="text/css" />
     <script src="airports.geojson"></script>
-    <script type="text/javascript" src="./api_keys.js"></script>
+    <!-- <script type="text/javascript" src="./api_keys.js"></script> -->
     <script type="text/javascript" src="./bundle.js"></script>
     <title>Global Radar</title>
   </head>
@@ -26,11 +26,12 @@
           <br>
           Smaller airports will show up if you zoom in more closely!
         </p>
-        <a href="https://github.com/yang968/Global-Radar" target="_blank">Github</a>
+        <a href="https://github.com/yang968/Global-Radar-Final" target="_blank">Github</a>
         <a href="https://www.linkedin.com/in/yang53/" target="_blank">LinkedIn</a>
       </div>
 
       <script type="text/javascript">
+        const mapbox = process.env.mapbox;
         mapboxgl.accessToken = mapbox;
 
         let map = new mapboxgl.Map({
