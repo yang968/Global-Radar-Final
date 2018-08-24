@@ -10,6 +10,10 @@ app.use(express.static('public'))
 
 app.get('/', (request, res) => {
   res.sendFile(path.join(__dirname, './public/index.html'))
+});
+
+app.get('/mapbox', (request, response) => {
+  response.send(process.env.mapbox);
 })
 
 // create route to get single book by its isbn

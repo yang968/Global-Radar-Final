@@ -32,7 +32,14 @@
       </div>
 
       <script type="text/javascript">
-        const mapbox = process.env.mapbox;
+        let mapbox;
+        $.ajax({
+          method: 'get',
+          url: `/mapbox`
+        }).then(response => {
+          mapbox = response;
+        });
+
         mapboxgl.accessToken = mapbox;
 
         let map = new mapboxgl.Map({
