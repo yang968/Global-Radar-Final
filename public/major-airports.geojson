@@ -1,0 +1,824 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates":  [ -84.44403,33.640068 ]
+      },
+      "properties": {
+      "airportId":411,
+      "nameAirport":"Hartsfield-jackson Atlanta International Airport",
+      "codeIataAirport":"ATL",
+      "codeIcaoAirport":"KATL",
+      "nameTranslations":"Hartsfield–Jackson Atlanta International,Hartsfield-jackson Atlanta International,Hartsfield-Jackson,Hartsfield-Jackson,Hartsfield-Jackson,Hartsfield Jackson,สนามบินฮาร์ทสฟีลด์-แจ็คสัน,哈特菲尔德机场",
+      "geonameId":4180439,
+      "timezone":"America/New_York",
+      "GMT":-5,
+      "phone":"800-897-1910",
+      "nameCountry":"United States",
+      "codeIso2Country":"US",
+      "codeIataCity":"ATL"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+         "type": "Point",
+         "coordinates":  [ 116.5871,40.078537 ]
+      },
+      "properties": {
+      "airportId":6035,
+      "nameAirport":"Beijing Capital International Airport",
+      "codeIataAirport":"PEK",
+      "codeIcaoAirport":"ZBAA",
+      "nameTranslations":"Peking,Beijing Capital International,Capital,Пекин столичный,สนามบินปักกิ่งแคปิตอล,北京首都机场",
+      "geonameId":6301354,
+      "timezone":"Asia/Shanghai",
+      "GMT":8,
+      "phone":"010-64541100",
+      "nameCountry":"China",
+      "codeIso2Country":"CN",
+      "codeIataCity":"BJS"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+         "type": "Point",
+         "coordinates":  [ 55.352917,25.248665 ]
+      },
+      "properties": {
+      "airportId":1966,
+      "nameAirport":"Dubai International Airport",
+      "codeIataAirport":"DXB",
+      "codeIcaoAirport":"OMDB",
+      "nameTranslations":"Dubai,Dubai,Dubai International,Dubai International,Dubai International,Дубай,สนามบินนานาชาติดูไบ,迪拜机场",
+      "geonameId":6300096,
+      "timezone":"Asia/Dubai",
+      "GMT":4,
+      "phone":"\t+971 4 224 5555",
+      "nameCountry":"United Arab Emirates",
+      "codeIso2Country":"AE",
+      "codeIataCity":"DXB"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+         "type": "Point",
+         "coordinates":  [ 139.78453,35.54907 ]
+      },
+      "properties": {
+      "airportId":3009,
+      "nameAirport":"Tokyo Haneda Airport",
+      "codeIataAirport":"HND",
+      "codeIcaoAirport":"RJTT",
+      "nameTranslations":"Tokio Haneda,Haneda Airport,Haneda,Haneda,Haneda,Аэропорт Ханэда,สนามบินฮาเนดะ,Haneda,东京羽田机场",
+      "geonameId":6300412,
+      "timezone":"Asia/Tokyo",
+      "GMT":9,
+      "phone":"+81 03-5757-8",
+      "nameCountry":"Japan",
+      "codeIso2Country":"JP",
+      "codeIataCity":"TYO"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+         "type": "Point",
+         "coordinates":  [ -118.40828,33.943398 ]
+      },
+      "properties": {
+      "airportId":4189,
+      "nameAirport":"Los Angeles International Airport",
+      "codeIataAirport":"LAX",
+      "codeIcaoAirport":"KLAX",
+      "nameTranslations":"Los Angeles International,Los Angeles International,Los Angeles,Los Angeles,Los Angeles,Лос-Анджелес,สนามบินนานาชาติลอสแอนเจลิส,洛杉矶机场",
+      "geonameId":5368418,
+      "timezone":"America/Los_Angeles",
+      "GMT":-8,
+      "phone":"310-646-5252",
+      "nameCountry":"United States",
+      "codeIso2Country":"US",
+      "codeIataCity":"LAX"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+         "type": "Point",
+         "coordinates":  [ -87.90488,41.976913 ]
+      },
+      "properties": {
+      "airportId":5818,
+      "nameAirport":"Chicago O'hare International Airport",
+      "codeIataAirport":"ORD",
+      "codeIcaoAirport":"KORD",
+      "nameTranslations":"O’Hare International,Chicago O'hare International,O'Hare International,O'Hare International,O'Hare International,O'Хара,สนามบินนานาชาติชิคาโกโอแฮร์,O'Hare,芝加哥奥黑尔机场",
+      "geonameId":4887479,
+      "timezone":"America/Chicago",
+      "GMT":-6,
+      "phone":"773-686-2200",
+      "nameCountry":"United States",
+      "codeIso2Country":"US",
+      "codeIataCity":"CHI"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+         "type": "Point",
+         "coordinates":  [ -0.453566,51.469604 ]
+      },
+      "properties": {
+      "airportId":4329,
+      "nameAirport":"London Heathrow Airport",
+      "codeIataAirport":"LHR",
+      "codeIcaoAirport":"EGLL",
+      "nameTranslations":"London Heathrow,Heathrow,Heathrow,Heathrow,Londres-Heathrow,Хитроу,สนามบินลอนดอนฮีทโธรว์,Heathrow,伦敦希思罗机场",
+      "geonameId":2647216,
+      "timezone":"Europe/London",
+      "GMT":0,
+      "phone":"0844 335 1801",
+      "nameCountry":"United Kingdom",
+      "codeIso2Country":"GB",
+      "codeIataCity":"LON"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+         "type": "Point",
+         "coordinates":  [ 113.93649,22.315248 ]
+      },
+      "properties": {
+      "airportId":2967,
+      "nameAirport":"Hong Kong International",
+      "codeIataAirport":"HKG",
+      "codeIcaoAirport":"VHHH",
+      "nameTranslations":"Chek Lap Kok,Hong Kong International,Hong Kong Intl,Hong Kong Intl,Hong Kong Intl,Гонконг,สนามบินนานาชาติฮ่องกง,香港国际机场",
+      "geonameId":6301089,
+      "timezone":"Asia/Hong_Kong",
+      "GMT":8,
+      "phone":"+852 2181 888",
+      "nameCountry":"Hong Kong",
+      "codeIso2Country":"HK",
+      "codeIataCity":"HKG"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+         "type": "Point",
+         "coordinates":  [ 121.799805,31.151825 ]
+      },
+      "properties": {
+      "airportId":6392,
+      "nameAirport":"Shanghai Pudong International Airport",
+      "codeIataAirport":"PVG",
+      "codeIcaoAirport":"ZSPD",
+      "nameTranslations":"Shanghai Pudong International,Shanghai Pudong International,Pu Dong,Pu Dong,Pu Dong,Шанхай (Пудун),สนามบินนานาชาติเซี่ยงไฮ้ผู่ตง,Pu Dong Airport,上海浦东机场",
+      "geonameId":6301386,
+      "timezone":"Asia/Shanghai",
+      "GMT":8,
+      "phone":"021-96990",
+      "nameCountry":"China",
+      "codeIso2Country":"CN",
+      "codeIataCity":"SHA"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+         "type": "Point",
+         "coordinates":  [ 2.567023,49.003197 ]
+      },
+      "properties": {
+      "airportId":1203,
+      "nameAirport":"Paris-Charles de Gaulle Airport",
+      "codeIataAirport":"CDG",
+      "codeIcaoAirport":"LFPG",
+      "nameTranslations":"Paris-Charles-de-Gaulle,Charles De Gaulle,Ch. De Gaulle,Ch. De Gaulle,Ch. De Gaulle,Шарль-де-Голль,สนามบินปารีสชาร์ลเดอโกล,Charles Degaulle,巴黎戴高乐机场",
+      "geonameId":6269554,
+      "timezone":"Europe/Paris",
+      "GMT":1,
+      "phone":"(01) 4862 121",
+      "nameCountry":"France",
+      "codeIso2Country":"FR",
+      "codeIataCity":"PAR"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+         "type": "Point",
+         "coordinates":  [ 4.763385,52.30907 ]
+      },
+      "properties": {
+      "airportId":268,
+      "nameAirport":"Amsterdam Airport Schiphol",
+      "codeIataAirport":"AMS",
+      "codeIcaoAirport":"EHAM",
+      "nameTranslations":"Schiphol,Schiphol,Amsterdam-Schiphol,Amsterdam-Schiphol,Amsterdam-Schiphol,Схипхол,สนามบินสกิปโพล,Schiphol,斯希普霍尔机场",
+      "geonameId":6296680,
+      "timezone":"Europe/Amsterdam",
+      "GMT":1,
+      "phone":"",
+      "nameCountry":"Netherlands",
+      "codeIso2Country":"NL",
+      "codeIataCity":"AMS"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+         "type": "Point",
+         "coordinates":  [ -97.036125,32.89746 ]
+      },
+      "properties": {
+      "airportId":1756,
+      "nameAirport":"Dallas/Fort Worth International Airport",
+      "codeIataAirport":"DFW",
+      "codeIcaoAirport":"KDFW",
+      "nameTranslations":"Dallas/Fort Worth,Dallas/Fort Worth International,Dallas/Ft Worth Intl,Dallas/Ft Worth Intl,Dallas/Ft Worth Intl,Даллас Форт Уэрт,สนามบินนานาชาติดัลลัส-ฟอร์ตเวิร์ธ,Dallas Fort Worth International,达拉斯机场",
+      "geonameId":4684943,
+      "timezone":"America/Chicago",
+      "GMT":-6,
+      "phone":"972-973-8888",
+      "nameCountry":"United States",
+      "codeIso2Country":"US",
+      "codeIataCity":"DFW"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+         "type": "Point",
+         "coordinates":  [ 113.29734,23.387861 ]
+      },
+      "properties": {
+      "airportId":1135,
+      "nameAirport":"Guangzhou Baiyun International Airport",
+      "codeIataAirport":"CAN",
+      "codeIcaoAirport":"ZGGG",
+      "nameTranslations":"Guangzhou Baiyun International,Guangzhou Baiyun International,Baiyun,Baiyun,Baiyun,Baiyun,สนามบินนานาชาติกวางโจวไป๋หยุน,广州白云机场",
+      "geonameId":6301359,
+      "timezone":"Asia/Shanghai",
+      "GMT":8,
+      "phone":"",
+      "nameCountry":"China",
+      "codeIso2Country":"CN",
+      "codeIataCity":"CAN"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+         "type": "Point",
+         "coordinates":  [ 8.570773,50.050735 ]
+      },
+      "properties": {
+      "airportId":2401,
+      "nameAirport":"Frankfurt International Airport",
+      "codeIataAirport":"FRA",
+      "codeIcaoAirport":"EDDF",
+      "nameTranslations":"Frankfurt Main,Frankfurt International Airport,Frankfurt,Frankfurt,Frankfurt,สนามบินแฟรงก์เฟิร์ต,Rhein-Main,法兰克福梅因机场",
+      "geonameId":6290293,
+      "timezone":"Europe/Berlin",
+      "GMT":1,
+      "phone":"+49 (0) 1805",
+      "nameCountry":"Germany",
+      "codeIso2Country":"DE",
+      "codeIataCity":"FRA"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+         "type": "Point",
+         "coordinates":  [ 28.815277,40.976665 ]
+      },
+      "properties": {
+      "airportId":3371,
+      "nameAirport":"Istanbul Atatürk Airport",
+      "codeIataAirport":"IST",
+      "codeIcaoAirport":"LTBA",
+      "nameTranslations":"Atatürk,Ataturk,Ataturk,Ataturk,Ataturk,Ататюрк,สนามบินอาทาทูร์ค - ฝั่งยุโรป,阿塔图尔克机场",
+      "geonameId":6299743,
+      "timezone":"Europe/Istanbul",
+      "GMT":2,
+      "phone":"",
+      "nameCountry":"Turkey",
+      "codeIso2Country":"TR",
+      "codeIataCity":"IST"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+         "type": "Point",
+         "coordinates":  [ 77.10079,28.556555 ]
+      },
+      "properties": {
+      "airportId":1744,
+      "nameAirport":"Indira Gandhi International Airport",
+      "codeIataAirport":"DEL",
+      "codeIcaoAirport":"VIDP",
+      "nameTranslations":"Indira Gandhi International ,Indira Gandhi International,Indira Gandhi Intl,Indira Gandhi Intl,Indira Gandhi Intl,Дели Индира Ганди,สนามบินนานาชาติเดลี,英迪拉甘地机场",
+      "geonameId":6301872,
+      "timezone":"Asia/Kolkata",
+      "GMT":6,
+      "phone":"+91-124-33760",
+      "nameCountry":"India",
+      "codeIso2Country":"IN",
+      "codeIataCity":"DEL"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+         "type": "Point",
+         "coordinates":  [ 106.655525,-6.130643 ]
+      },
+      "properties": {
+      "airportId":1274,
+      "nameAirport":"Soekarno-Hatta International Airport",
+      "codeIataAirport":"CGK",
+      "codeIcaoAirport":"WIII",
+      "nameTranslations":"Jakarta Soekarno-Hatta,Soekarno-Hatta International,Soekarno-Hatta Intl,Soekarno-Hatta Intl,Soekarno-Hatta Intl,สนามบินนานาชาติซูการ์โนฮัตตา,Soekarno–Hatta International Airport,雅加达机场",
+      "geonameId":6301878,
+      "timezone":"Asia/Jakarta",
+      "GMT":7,
+      "phone":"",
+      "nameCountry":"Indonesia",
+      "codeIso2Country":"ID",
+      "codeIataCity":"JKT"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+         "type": "Point",
+         "coordinates":  [ 103.990204,1.361173 ]
+      },
+      "properties": {
+      "airportId":7111,
+      "nameAirport":"Singapore Changi Airport",
+      "codeIataAirport":"SIN",
+      "codeIcaoAirport":"WSSS",
+      "nameTranslations":"Singapur,Singapore Changi,Changi,Changi,Changi,Changi,สนามบินชางงี,Changi,新加坡樟宜机场",
+      "geonameId":1880725,
+      "timezone":"Asia/Singapore",
+      "GMT":8,
+      "phone":"(65) 6595 686",
+      "nameCountry":"Singapore",
+      "codeIso2Country":"SG",
+      "codeIataCity":"SIN"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+         "type": "Point",
+         "coordinates":  [ 126.45123,37.448524 ]
+      },
+      "properties": {
+      "airportId":3183,
+      "nameAirport":"Seoul Incheon International Airport",
+      "codeIataAirport":"ICN",
+      "codeIcaoAirport":"RKSI",
+      "nameTranslations":"Incheon,Seoul (Incheon),Incheon Intl Airport,Incheon Intl Airport,Incheon Intl Airport,Incheon,สนามบินนานาชาติอินชอน,Incheon International,首尔仁川机场",
+      "geonameId":6300433,
+      "timezone":"Asia/Seoul",
+      "GMT":9,
+      "phone":"82-1577-2600",
+      "nameCountry":"South Korea",
+      "codeIso2Country":"KR",
+      "codeIataCity":"SEL"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+         "type": "Point",
+         "coordinates":  [ -104.672844,39.84939 ]
+      },
+      "properties": {
+      "airportId":1746,
+      "nameAirport":"Denver International Airport",
+      "codeIataAirport":"DEN",
+      "codeIcaoAirport":"KDEN",
+      "nameTranslations":"Denver International,Denver International,Denver International,Denver International,Denver International,Международный аэропорт Денвер,สนามบินเดนเวอร์,International,丹佛机场",
+      "geonameId":5419401,
+      "timezone":"America/Denver",
+      "GMT":-7,
+      "phone":"303-342-2000",
+      "nameCountry":"United States",
+      "codeIso2Country":"US",
+      "codeIataCity":"DEN"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+         "type": "Point",
+         "coordinates":  [ 100.752045,13.693062 ]
+      },
+      "properties": {
+      "airportId":773,
+      "nameAirport":"Suvarnabhumi International Airport",
+      "codeIataAirport":"BKK",
+      "codeIcaoAirport":"VTBS",
+      "nameTranslations":"Suvarnabhumi International,Suvarnabhumi International,Suvarnabhum,Suvarnabhumi,Suvarnabhumi,Суварнабуми,สนามบินนานาชาติสุวรรณภูมิ,曼谷机场",
+      "geonameId":6301137,
+      "timezone":"Asia/Bangkok",
+      "GMT":7,
+      "phone":"02-132-1888",
+      "nameCountry":"Thailand",
+      "codeIso2Country":"TH",
+      "codeIataCity":"BKK"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+         "type": "Point",
+         "coordinates":  [ -73.78817,40.642334 ]
+      },
+      "properties": {
+      "airportId":3498,
+      "nameAirport":"John F Kennedy International Airport",
+      "codeIataAirport":"JFK",
+      "codeIcaoAirport":"KJFK",
+      "nameTranslations":"John F. Kennedy International,John F Kennedy International,John F Kennedy Intl,John F Kennedy Intl,John F Kennedy Intl,Джон Ф. Кеннеди,สนามบินจอห์นเอฟเคนเนดี,John F. Kennedy,肯尼迪机场",
+      "geonameId":5122732,
+      "timezone":"America/New_York",
+      "GMT":-5,
+      "phone":"718-244-4444",
+      "nameCountry":"United States",
+      "codeIso2Country":"US",
+      "codeIataCity":"NYC"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+         "type": "Point",
+         "coordinates":  [ 101.70539,2.755672 ]
+      },
+      "properties": {
+      "airportId":4088,
+      "nameAirport":"Kuala Lumpur International Airport (klia)",
+      "codeIataAirport":"KUL",
+      "codeIcaoAirport":"WMKK",
+      "nameTranslations":"Kuala Lumpur International Airport (KLIA),Kuala Lumpur International Airport (klia),Kuala Lumpur Intl,Kuala Lumpur Intl,Kuala Lumpur Intl,Куала-Лумпур,สนามบินนานาชาติกัวลาลัมเปอร์,吉隆坡国际机场",
+      "geonameId":6301255,
+      "timezone":"Asia/Kuala_Lumpur",
+      "GMT":8,
+      "phone":"+603-8776 200",
+      "nameCountry":"Malaysia",
+      "codeIso2Country":"MY",
+      "codeIataCity":"KUL"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+         "type": "Point",
+         "coordinates":  [ -122.38988,37.615215 ]
+      },
+      "properties": {
+      "airportId":7038,
+      "nameAirport":"San Francisco International Airport",
+      "codeIataAirport":"SFO",
+      "codeIcaoAirport":"KSFO",
+      "nameTranslations":"San Francisco International,San Francisco International,San Francisco,San Francisco,San Francisco,Сан-Франциско,สนามบินซานฟรานซิสโก,旧金山机场",
+      "geonameId":5391989,
+      "timezone":"America/Los_Angeles",
+      "GMT":-8,
+      "phone":"650-821-8211",
+      "nameCountry":"United States",
+      "codeIso2Country":"US",
+      "codeIataCity":"SFO"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+         "type": "Point",
+         "coordinates":  [ -3.570209,40.46515 ]
+      },
+      "properties": {
+      "airportId":4644,
+      "nameAirport":"Madrid Barajas Airport",
+      "codeIataAirport":"MAD",
+      "codeIcaoAirport":"LEMD",
+      "nameTranslations":"Madrid,Barajas,Barajas,Barajas,Barajas,สนามบินมาดริด-บาราคาส,Madrid-Barajas,巴拉哈斯机场",
+      "geonameId":6299345,
+      "timezone":"Europe/Madrid",
+      "GMT":1,
+      "phone":"902-404-704",
+      "nameCountry":"Spain",
+      "codeIso2Country":"ES",
+      "codeIataCity":"MAD"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+         "type": "Point",
+         "coordinates":  [ 103.9568,30.581135 ]
+      },
+      "properties": {
+      "airportId":1568,
+      "nameAirport":"Chengdu Shuangliu International Airport",
+      "codeIataAirport":"CTU",
+      "codeIcaoAirport":"ZUUU",
+      "nameTranslations":"Chengdu,Shuangliu,Chengdu,Chengdu,Chengdu,สนามบินนานาชาติเฉิงตูชวงหลิว,成都双流机场",
+      "geonameId":6301392,
+      "timezone":"Asia/Shanghai",
+      "GMT":8,
+      "phone":"",
+      "nameCountry":"China",
+      "codeIso2Country":"CN",
+      "codeIataCity":"CTU"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+         "type": "Point",
+         "coordinates":  [ -115.1486,36.086945 ]
+      },
+      "properties": {
+      "airportId":4184,
+      "nameAirport":"McCarran International Airport",
+      "codeIataAirport":"LAS",
+      "codeIcaoAirport":"KLAS",
+      "nameTranslations":"McCarran International Airport Las Vegas,Mc Carran International,McCarran,McCarran,McCarran,McCarran,สนามบินนานาชาติแมคคาร์แรน,麦卡伦机场",
+      "geonameId":5507974,
+      "timezone":"America/Los_Angeles",
+      "GMT":-8,
+      "phone":"702-261-5211",
+      "nameCountry":"United States",
+      "codeIso2Country":"US",
+      "codeIataCity":"LAS"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+         "type": "Point",
+         "coordinates":  [ 2.07593,41.30303 ]
+      },
+      "properties": {
+      "airportId":580,
+      "nameAirport":"Barcelona–El Prat Airport",
+      "codeIataAirport":"BCN",
+      "codeIcaoAirport":"LEBL",
+      "nameTranslations":"Barcelona El Prat,El Prat De Llobregat,Barcelona,Barcelona,Barcelona,สนามบินบาร์เซโลนาเอลแปรต,Barcelona Int. Apt,巴塞罗那机场",
+      "geonameId":3128760,
+      "timezone":"Europe/Madrid",
+      "GMT":1,
+      "phone":"902 404 704",
+      "nameCountry":"Spain",
+      "codeIso2Country":"ES",
+      "codeIataCity":"BCN"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+         "type": "Point",
+         "coordinates":  [ 72.87497,19.095509 ]
+      },
+      "properties": {
+      "airportId":872,
+      "nameAirport":"Chhatrapati Shivaji International Airport",
+      "codeIataAirport":"BOM",
+      "codeIcaoAirport":"VABB",
+      "nameTranslations":"Chhatrapati Shivaji International,Chhatrapati Shivaji International (Sahar International),Chhatrapati Shivaji,Chhatrapati Shivaji,Chhatrapati Shivaji,Chhatrapati Shivaji,สนามบินนานาชาติฉัตรปาตีศิวะจี,Chhatrapati Shivaji International,孟买机场",
+      "geonameId":6301032,
+      "timezone":"Asia/Kolkata",
+      "GMT":6,
+      "phone":"(022) 2626-40",
+      "nameCountry":"India",
+      "codeIso2Country":"IN",
+      "codeIataCity":"BOM"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+         "type": "Point",
+         "coordinates":  [ -79.61146,43.681583 ]
+      },
+      "properties": {
+      "airportId":9590,
+      "nameAirport":"Toronto Pearson International Airport",
+      "codeIataAirport":"YYZ",
+      "codeIcaoAirport":"CYYZ",
+      "nameTranslations":"Toronto Pearson International,Lester B. Pearson International,Pearson Intl,Pearson Intl,Pearson Intl,Лестер Б. Пирсон,สนามบินนานาชาติโตรอนโตเพียร์สัน,Pearson Int. Apt.,莱斯特佩尔逊机场",
+      "geonameId":6296338,
+      "timezone":"America/Toronto",
+      "GMT":-5,
+      "phone":"416-247-7678",
+      "nameCountry":"Canada",
+      "codeIso2Country":"CA",
+      "codeIataCity":"YTO"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+         "type": "Point",
+         "coordinates":  [ -122.301735,47.44384 ]
+      },
+      "properties": {
+      "airportId":7004,
+      "nameAirport":"Seattle–Tacoma International Airport",
+      "codeIataAirport":"SEA",
+      "codeIcaoAirport":"KSEA",
+      "nameTranslations":"Seattle-Tacoma International,Seattle-Tacoma International,Seattle/Tacoma Intl,Seattle/Tacoma Intl,Seattle/Tacoma Intl,Сиэтл Такома,สนามบินซี-แทค,Tacoma International,西雅图机场",
+      "geonameId":5809876,
+      "timezone":"America/Los_Angeles",
+      "GMT":-8,
+      "phone":"206-787-5388",
+      "nameCountry":"United States",
+      "codeIso2Country":"US",
+      "codeIataCity":"SEA"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+         "type": "Point",
+         "coordinates":  [ -80.93584,35.219166 ]
+      },
+      "properties": {
+      "airportId":1388,
+      "nameAirport":"Charlotte Douglas International Airport",
+      "codeIataAirport":"CLT",
+      "codeIcaoAirport":"KCLT",
+      "nameTranslations":"Charlotte,Charlotte Douglas,Douglas,Douglas,Douglas,สนามบินนานาชาติชาร์ล็อตต์ดักลาส,夏洛特机场",
+      "geonameId":4460310,
+      "timezone":"America/New_York",
+      "GMT":-5,
+      "phone":"704-359-4000",
+      "nameCountry":"United States",
+      "codeIso2Country":"US",
+      "codeIataCity":"CLT"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+         "type": "Point",
+         "coordinates":  [ -74.17876,40.68907 ]
+      },
+      "properties": {
+      "airportId":2232,
+      "nameAirport":"Newark Liberty International Airport",
+      "codeIataAirport":"EWR",
+      "codeIcaoAirport":"KEWR",
+      "nameTranslations":"Newark Liberty International,Newark Liberty International,Newark,Newark,Newark,Ньюарк,สนามบินนวร์ก,Newark,纽沃克机场",
+      "geonameId":5101809,
+      "timezone":"America/New_York",
+      "GMT":-5,
+      "phone":"973-961- 6000",
+      "nameCountry":"United States",
+      "codeIso2Country":"US",
+      "codeIataCity":"NYC"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+         "type": "Point",
+         "coordinates":  [ 37.416573,55.966324 ]
+      },
+      "properties": {
+      "airportId":7430,
+      "nameAirport":"Sheremetyevo International Airport",
+      "codeIataAirport":"SVO",
+      "codeIcaoAirport":"UUEE",
+      "nameTranslations":"Moskau-Scheremetjewo,Sheremetyevo International,Sheremetyevo,Sheremetyevo,Sheremetyevo,Шереметьево,สนามบินนานาชาติเชเรเมเตียโว,Şeremetyevo Uluslararası Havalimanı,谢列梅捷沃机场",
+      "geonameId":494811,
+      "timezone":"Europe/Moscow",
+      "GMT":4,
+      "phone":"+7 495 232-65",
+      "nameCountry":"Russia",
+      "codeIso2Country":"RU",
+      "codeIataCity":"MOW"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+         "type": "Point",
+         "coordinates":  [ 12.250346,41.794594 ]
+      },
+      "properties": {
+      "airportId":2280,
+      "nameAirport":"Leonardo da Vinci–Fiumicino Airport",
+      "codeIataAirport":"FCO",
+      "codeIcaoAirport":"LIRF",
+      "nameTranslations":"Rom Fiumicino,Leonardo Da Vinci (Fiumicino),Fiumicino,Fiumicino,Fiumicino,Фиумичино,สนามบินโรมฟิวมิชิโน,Fiumicino,西阿姆皮诺机场",
+      "geonameId":6299619,
+      "timezone":"Europe/Rome",
+      "GMT":1,
+      "phone":"+39 06-65951",
+      "nameCountry":"Italy",
+      "codeIso2Country":"IT",
+      "codeIataCity":"ROM"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+         "type": "Point",
+         "coordinates":  [ 151.1799,-33.932922 ]
+      },
+      "properties": {
+      "airportId":7491,
+      "nameAirport":"Sydney Kingsford-Smith Airport",
+      "codeIataAirport":"SYD",
+      "codeIcaoAirport":"YSSY",
+      "nameTranslations":"Kingsford Smith International,Kingsford Smith,Kingsford Smith,Kingsford Smith,Kingsford Smith,Sydney Kingsford Smith,สนามบินซิดนีย์,悉尼机场",
+      "geonameId":2208268,
+      "timezone":"Australia/Sydney",
+      "GMT":11,
+      "phone":"+61 2 9667 91",
+      "nameCountry":"Australia",
+      "codeIso2Country":"AU",
+      "codeIataCity":"SYD"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+         "type": "Point",
+         "coordinates":  [ 11.790143,48.353004 ]
+      },
+      "properties": {
+      "airportId":5145,
+      "nameAirport":"Munich Airport",
+      "codeIataAirport":"MUC",
+      "codeIcaoAirport":"EDDM",
+      "nameTranslations":"Franz Josef Strauß,Franz Josef Strauss,Franz Josef Strauss,Franz Josef Strauss,Monaco di Baviera,Мюнхен,สนามบินมิวนิก,Franz Josef Strauss,慕尼黑雷姆机场",
+      "geonameId":3208399,
+      "timezone":"Europe/Berlin",
+      "GMT":1,
+      "phone":"089/97500",
+      "nameCountry":"Germany",
+      "codeIso2Country":"DE",
+      "codeIataCity":"MUC"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+         "type": "Point",
+         "coordinates":  [ -99.07278,19.435278 ]
+      },
+      "properties": {
+      "airportId":4768,
+      "nameAirport":"Mexico City International Airport",
+      "codeIataAirport":"MEX",
+      "codeIcaoAirport":"MMMX",
+      "nameTranslations":"Internationale Flughafen von Mexiko-Stadt,Internacional Benito Juarez,Juarez & other airports,Juarez & other airports,Juarez & other airports,Juarez,สนามบินเบนิโตฮัวเรซ,贝尼托华雷斯机场",
+      "geonameId":6299859,
+      "timezone":"America/Mexico_City",
+      "GMT":-6,
+      "phone":"2482-2424",
+      "nameCountry":"Mexico",
+      "codeIso2Country":"MX",
+      "codeIataCity":"MEX"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+         "type": "Point",
+         "coordinates":  [ -46.481926,-23.425669 ]
+      },
+      "properties": {
+      "airportId":2736,
+      "nameAirport":"São Paulo–Guarulhos International Airport",
+      "codeIataAirport":"GRU",
+      "codeIcaoAirport":"SBGR",
+      "nameTranslations":"Sao Paulo Guarulhos,Aeroporto Internacional Guarulhos,Guarulhos Intl,Guarulhos Intl,Guarulhos Intl,สนามบินนานาชาติกวาลูรุส,Guarulhos Intl,瓜茹尔赫斯机场",
+      "geonameId":6300629,
+      "timezone":"America/Sao_Paulo",
+      "GMT":-2,
+      "phone":"(11) 2445-294",
+      "nameCountry":"Brazil",
+      "codeIso2Country":"BR",
+      "codeIataCity":"SAO"
+      }
+    }
+  ]
+}

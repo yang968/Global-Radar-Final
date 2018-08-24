@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.47.0/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.47.0/mapbox-gl.css' rel='stylesheet'/>
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700' rel='stylesheet' />
+    <link href='./style.css' rel='stylesheet' type="text/css" />
+    <script src="airports.geojson"></script>
+    <script type="text/javascript" src="./api_keys.js"></script>
+    <script type="text/javascript" src="./bundle.js"></script>
+    <title>Global Radar</title>
+  </head>
+  <body>
+    <main id='main'>
+      <div id="map"></div>
+      <div class="about">
+        <h3>Global Radar</h3>
+        <p>Please wait a couple seconds to see all large commercial aircrafts!</p>
+        <p>
+          Click on the planes see more information about a flight.
+          <br>
+          Click on an airport to see information about it's departing and arriving flights.
+          <br>
+          Smaller airports will show up if you zoom in more closely!
+        </p>
+        <a href="https://github.com/yang968/Global-Radar" target="_blank">Github</a>
+        <a href="https://www.linkedin.com/in/yang53/" target="_blank">LinkedIn</a>
+      </div>
+
+      <script type="text/javascript">
+        mapboxgl.accessToken = mapbox;
+
+        let map = new mapboxgl.Map({
+          container: "map",
+          style: 'mapbox://styles/spenceryang89/cjl1xnyyo8bcs2sqne3gq0cdm',
+          center: [-87.661557, 41.893748],
+          zoom: 4
+        });
+
+        let airports;
+        let majorAirports;
+        let airportCoordinates = {};
+        $.getJSON('major-airports.geojson', function (airportsData) {
+          majorAirports = airportsData;
+          majorAirports.features.forEach(airport => {
+            airportCoordinates[airport.properties.codeIataAirport] = airport.geometry.coordinates;
+          })
+        })
+        $.getJSON('airports.geojson', function (airportsData) {
+          airports = airportsData;
+          airports.features.forEach(airport => {
+            airportCoordinates[airport.properties.codeIataAirport] = airport.geometry.coordinates;
+          })
+        });
+
+        const LARGE_AIRCRAFTS = {
+          A333: 1, A343: 1, A346: 1, A359: 1, A388: 1,
+          B772: 1, B773: 1, B744: 1, B748: 1
+        }
+
+        const AIRCRAFTS = {
+          320: 1, 747: 1, 767: 1, A20N: 1, A306: 1,
+          A319: 1, A320: 1, A321: 1, A330: 1, A332: 1,
+          B38M: 1, B39M: 1, B77L: 1, B77W: 1, B712: 1,
+          B734: 1, B735: 1, B736: 1, B737: 1, B738: 1,
+          B739: 1, B752: 1, B753: 1, B762: 1, B763: 1,
+          B764: 1, B788: 1, B789: 1, E75L: 1
+        }
+
+        let flightsJSON, largeFlightsJSON, departureLines, arrivalLines;
+        let departFrom = {};
+        let arriveTo = {};
+
+        map.on('load', function() {
+          map.addLayer({
+            id: 'major-airports',
+            type: 'symbol',
+            source: {
+              type: 'geojson',
+              data: majorAirports
+            },
+            layout: {
+              'icon-image': 'marker-15',
+              'icon-allow-overlap': true,
+              'icon-size': 1,
+            }
+          });
+          map.addLayer({
+            id: 'airports',
+            type: 'symbol',
+            minzoom: 6,
+            source: {
+              type: 'geojson',
+              data: airports
+            },
+            layout: {
+              'icon-image': 'marker-15',
+              'icon-allow-overlap': true,
+              'icon-size': 0.8,
+            }
+          });
+        })
+
+        $.ajax({
+          method: 'get',
+          url: `/flights`
+        }).then(response => {
+          parseJSON(JSON.parse(response));
+          setAirportFlights(largeFlightsJSON);
+          // map.getSource('large-planes').setData(largeFlightsJSON);
+        }).then(() => {
+          map.addSource('large-planes', { type: 'geojson', data: largeFlightsJSON });
+          map.addLayer({
+            id: 'large-planes',
+            type: 'symbol',
+            source: 'large-planes',
+            layout: {
+              'icon-image': 'airport-15',
+              'icon-allow-overlap': true,
+              'icon-rotate': ['get', 'direction'],
+              'icon-size': 0.8,
+            }
+          });
+          map.on('click', (e) => {
+            let features = map.queryRenderedFeatures(e.point, { layers: ['major-airports', 'airports', 'large-planes'] });
+            if (features.length) {
+              let clickedPoint = features[0];
+              flyToItem(clickedPoint);
+              createPopup(clickedPoint);
+              generateLine(clickedPoint)
+            }
+          });
+        });
+
+
+
+        function getPlaneLines(departure, arrival, coordinates) {
+          departureLines = {
+            type: "Feature",
+            geometry: {
+              type: "LineString",
+              coordinates: [
+                airportCoordinates[departure],
+                coordinates
+              ]
+            },
+            properties: {
+              color: '#FFFE3A',
+              opacity: 1
+            }
+          }
+          arrivalLines = {
+            type: "Feature",
+            geometry: {
+              type: "LineString",
+              coordinates: [
+                coordinates,
+                airportCoordinates[arrival]
+              ]
+            },
+            properties: {
+              color: '#FFFE3A',
+              opacity: 0.3
+            }
+          }
+        }
+
+        function generateLine(feature) {
+          if (map.getLayer('departureLines') != undefined) {
+            map.removeLayer('departureLines');
+            map.removeSource('departureLines');
+          }
+          if (map.getLayer('arrivalLines') != undefined) {
+            map.removeLayer('arrivalLines');
+            map.removeSource('arrivalLines');
+          }
+          if (feature.source === 'large-planes') {
+            getPlaneLines(feature.properties.departure, feature.properties.arrival, feature.geometry.coordinates);
+          } else if (feature.source === 'airports' || feature.source === 'major-airports') {
+            departureLines = {
+              type: "FeatureCollection",
+              features: []
+            }
+            let departures = departFrom[feature.properties.codeIataAirport];
+            if (departures) {
+              Object.values(departures).forEach(flight => {
+                let line = {
+                  type: "Feature",
+                  geometry: {
+                    type: "LineString",
+                    coordinates: [
+                      airportCoordinates[flight.properties.departure],
+                      flight.geometry.coordinates
+                    ]
+                  },
+                  properties: {
+                    color: '#FFFE3A',
+                    opacity: 1
+                  }
+                }
+                departureLines.features.push(line);
+              });
+            }
+
+            arrivalLines = {
+              type: "FeatureCollection",
+              features: []
+            }
+            let arrivals = arriveTo[feature.properties.codeIataAirport];
+
+            if (arrivals) {
+              Object.values(arrivals).forEach(flight => {
+                let line = {
+                  type: "Feature",
+                  geometry: {
+                    type: "LineString",
+                    coordinates: [
+                      flight.geometry.coordinates,
+                      airportCoordinates[flight.properties.arrival]
+                    ]
+                  },
+                  properties: {
+                    color: '#FFFE3A',
+                    opacity: 0.3
+                  }
+                }
+                arrivalLines.features.push(line);
+              });
+            }
+          }
+          addPlaneLineLayers();
+        }
+
+        function addPlaneLineLayers() {
+          map.addSource('departureLines', { type: 'geojson', data: departureLines });
+          map.addSource('arrivalLines', { type: 'geojson', data: arrivalLines });
+          map.addLayer({
+            id: 'departureLines',
+            type: 'line',
+            source: 'departureLines',
+            layout: {
+              "line-join": "round",
+              "line-cap": "round"
+            },
+            paint: {
+              'line-width': 5,
+              'line-color': ['get', 'color'],
+              'line-opacity': ['get', 'opacity'],
+            },
+          })
+          map.addLayer({
+            id: 'arrivalLines',
+            type: 'line',
+            source: 'arrivalLines',
+            layout: {
+              "line-join": "round",
+              "line-cap": "round"
+            },
+            paint: {
+              'line-width': 5,
+              'line-color': ['get', 'color'],
+              'line-opacity': ['get', 'opacity'],
+              'line-dasharray': [2, 2],
+            },
+          })
+        }
+
+        function flyToItem(feature) {
+          map.flyTo({
+            center: feature.geometry.coordinates,
+            zoom: 5.5
+          })
+        }
+
+        function createPopup(feature) {
+          let popups = document.getElementsByClassName('mapboxgl-popup');
+          if (popups[0]) popups[0].remove();
+
+          let coordinates = feature.geometry.coordinates;
+          if (feature.source === "airports" || feature.source === "major-airports") {
+            let name = feature.properties.nameAirport;
+            let country = feature.properties.nameCountry;
+            let timezone = feature.properties.timezone;
+            let iata = feature.properties.codeIataAirport;
+            let icao = feature.properties.codeIcaoAirport;
+
+            let popup = new mapboxgl.Popup({ closeOnClick: false, offset:[-1, -15] })
+            .setLngLat(coordinates)
+            .setHTML(`<h3>${name}</h3>
+              <h4>Country: ${country}<br>Timezone: ${timezone}
+              <br>iata: ${iata}<br>icao: ${icao}</h4>`)
+            .addTo(map);
+          } else {
+            let flightNumber = `${feature.properties.iata} / ${feature.properties.icao}`;
+            let departure = feature.properties.departure;
+            let arrival = feature.properties.arrival;
+            let altitude = feature.properties.altitude;
+            let speed = feature.properties.speed;
+            let status = feature.properties.status;
+            let aircraft = feature.properties.aircraft;
+
+            let popup = new mapboxgl.Popup({ closeOnClick: false, offset:[-1, -15] })
+            .setLngLat(coordinates)
+            .setHTML(`<h3>${flightNumber}</h3><h4>Status: ${status}<br>Departure: ${departure}<br>Arrival: ${arrival}<br>altitude: ${altitude} m<br>speed: ${speed} km/h<br>Aircraft: ${aircraft}</h4>`)
+            .addTo(map);
+          }
+        }
+
+        function parseJSON(data) {
+          flightsJSON = {
+            type: "FeatureCollection",
+            features: []
+          }
+          largeFlightsJSON = {
+            type: "FeatureCollection",
+            features: []
+          }
+          data.forEach(flight => {
+            if (LARGE_AIRCRAFTS.hasOwnProperty(flight.aircraft.icaoCode)) {
+              let feature = {
+                type: "Feature",
+                geometry: {
+                  type: "Point",
+                  coordinates: [flight.geography.longitude, flight.geography.latitude]
+                },
+                properties: {
+                  airlineIata: flight.airline.iataCode,
+                  airlineIcao: flight.airline.icaoCode,
+                  departure: flight.departure.iataCode,
+                  arrival: flight.arrival.iataCode,
+                  iata: flight.flight.iataNumber,
+                  icao: flight.flight.icaoNumber,
+                  altitude: flight.geography.altitude,
+                  direction: flight.geography.direction,
+                  speed: flight.speed.horizontal,
+                  status: flight.status,
+                  aircraft: flight.aircraft.icaoCode
+                }
+              }
+              largeFlightsJSON.features.push(feature);
+            }
+          });
+          console.log(largeFlightsJSON.features.length);
+        }
+
+        function setAirportFlights(flightsJSON) {
+          flightsJSON.features.forEach((feature) => {
+            departFrom[feature.properties.departure] = departFrom[feature.properties.departure] || {};
+            arriveTo[feature.properties.arrival] = arriveTo[feature.properties.arrival] || {};
+            departFrom[feature.properties.departure][feature.properties.iata] = feature;
+            arriveTo[feature.properties.arrival][feature.properties.iata] = feature;
+          });
+          // console.log(departFrom);
+          // console.log(arriveTo);
+        }
+      </script>
+    </main>
+  </body>
+</html>
