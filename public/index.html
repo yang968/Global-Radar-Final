@@ -38,9 +38,8 @@
           url: `/mapbox`
         }).then(response => {
           mapbox = response;
+          mapboxgl.accessToken = mapbox;
         });
-
-        mapboxgl.accessToken = mapbox;
 
         let map = new mapboxgl.Map({
           container: "map",
