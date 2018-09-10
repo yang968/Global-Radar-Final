@@ -6,8 +6,10 @@
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.47.0/mapbox-gl.js'></script>
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.47.0/mapbox-gl.css' rel='stylesheet'/>
-    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700' rel='stylesheet' />
-    <link href='./style.css' rel='stylesheet' type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+    <link href='./stylesheets/style.css' rel='stylesheet' type="text/css" />
+    <link href='./stylesheets/animate.css' rel='stylesheet' type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <link rel="icon" href="./images/icon.png" type="image/png">
     <script src="airports.geojson"></script>
     <!-- <script type="text/javascript" src="./api_keys.js"></script> -->
@@ -17,16 +19,14 @@
   <body>
     <main id='main'>
       <div id="map"></div>
-      <div class="about">
+      <div class="about animated bounceInDown">
         <h3>Global Radar</h3>
-        <p>Please wait a couple seconds to see all large commercial aircrafts!</p>
-        <p>
-          Click on the planes see more information about a flight.
-          <br>
-          Click on an airport to see information about it's departing and arriving flights.
-          <br>
-          Smaller airports will show up if you zoom in more closely!
-        </p>
+        <p>Please wait a couple seconds to see all aircrafts!</p>
+        <ul>
+          <li>Click on the planes see more information about a flight.</li>
+          <li>Click on an airport to see information about it's departing and arriving flights.</li>
+          <li>Smaller airports will show up if you zoom in more closely!</li>
+        </ul>
         <a href="https://github.com/yang968/Global-Radar-Final" target="_blank">Github</a>
         <a href="https://www.linkedin.com/in/yang53/" target="_blank">LinkedIn</a>
       </div>
@@ -86,7 +86,6 @@
           }).then(response => {
             parseJSON(JSON.parse(response));
             setAirportFlights(largeFlightsJSON);
-            // map.getSource('large-planes').setData(largeFlightsJSON);
           }).then(() => {
             map.addSource('large-planes', { type: 'geojson', data: largeFlightsJSON });
             map.addLayer({

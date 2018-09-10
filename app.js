@@ -8,7 +8,7 @@ const PORT = process.env.PORT || 8000; // process.env accesses heroku's environm
 
 app.use(express.static('public'))
 
-app.use(express.favicon(__dirname + './public/images/icon.png')); 
+// app.use(express.favicon(__dirname + './public/images/icon.png')); 
 
 app.get('/', (request, res) => {
   res.sendFile(path.join(__dirname, './public/index.html'))
