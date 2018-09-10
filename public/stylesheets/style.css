@@ -1,5 +1,5 @@
 .body {
-  font: 400 15px/22px 'Source Sans Pro', 'Helvetica Neue', 'Arial';
+  font: 400 15px/22px 'Merriweather Sans', 'Source Sans Pro', 'Helvetica Neue', 'Arial';
   margin: 0;
   padding: 0;
 }
@@ -19,7 +19,7 @@
   width: 400px;
   background: rgba(0,0,0, 0.2);
   color: white;
-  font-family: 'Source Sans Pro', 'Helvetica Neue', 'Arial';
+  font-family: 'Merriweather Sans', 'Source Sans Pro', 'Helvetica Neue', 'Arial';
   padding: 20px;
 }
 
@@ -77,4 +77,10 @@ a {
 
 .mapboxgl-popup-anchor-top > .mapboxgl-popup-tip {
   border-bottom-color: #87CDEC;
+}
+
+.icon-container {
+  width: 4em;
+  display: flex;
+  justify-content: space-between;
 }
