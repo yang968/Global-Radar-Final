@@ -18,8 +18,9 @@
   </head>
   <body>
     <main id='main'>
+      <div id="spinner"></div>
       <div id="map"></div>
-      <div class="about animated bounceInDown">
+      <div class="about animated bounceInDown delay-1s">
         <h3>Global Radar</h3>
         <p>Please wait a couple seconds to see all aircrafts!</p>
         <ul>
@@ -93,6 +94,7 @@
             parseJSON(JSON.parse(response));
             setAirportFlights(largeFlightsJSON);
           }).then(() => {
+            hideSpinner();
             map.addSource('large-planes', { type: 'geojson', data: largeFlightsJSON });
             map.addLayer({
               id: 'large-planes',
@@ -115,6 +117,10 @@
               }
             });
           });
+        }
+
+        function hideSpinner() {
+          document.getElementById('spinner').style.display = 'none';
         }
 
         let airports;

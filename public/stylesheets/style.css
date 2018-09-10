@@ -84,3 +84,28 @@ a {
   display: flex;
   justify-content: space-between;
 }
+
+#spinner {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  margin: -25px 0 0 -25px;
+  border: 8px dashed #f3f3f3;
+  border-radius: 50%;
+  border-top: 8px solid #FFFE3A;
+  width: 50px;
+  height: 50px;
+  -webkit-animation: spin 1s linear infinite;
+  animation: spin 1s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
